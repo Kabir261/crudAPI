@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGO_URL)
 // middleware
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/", require('./routes/route'))
 
